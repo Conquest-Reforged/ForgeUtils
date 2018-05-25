@@ -24,12 +24,4 @@ public class ForgeUtils {
             e.printStackTrace();
         }
     }
-
-    @EventHandler
-    public void serverLoad(FMLServerStartingEvent event) {
-        if ("true".equalsIgnoreCase(System.getProperty("enginehub.beanshell"))) {
-            FMLLog.info("ForgeUtils registering BeanShellCommand!");
-            event.registerServerCommand(new BeanShellCommand());
-        }
-    }
 }
